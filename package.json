@@ -1,6 +1,7 @@
 {
-  "name": "vue",
+  "name": "ticketandgo",
   "version": "0.0.0",
+  "author": "Marlon Felix",
   "private": true,
   "type": "module",
   "scripts": {
