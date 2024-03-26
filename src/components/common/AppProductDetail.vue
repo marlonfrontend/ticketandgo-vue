@@ -17,8 +17,8 @@ const createOrder = (product) => {
 </script>
 
 <template>
-  <div class="flex gap-5">
-    <div class="w-1/2">
+  <div class="grid grid-cols-2 gap-10">
+    <div class="flex-1">
       <div class="w-[100%] h-[450px] p-10 border">
         <img
           :src="store.state.product.image"
@@ -28,7 +28,7 @@ const createOrder = (product) => {
         />
       </div>
     </div>
-    <div class="w-1/2">
+    <div class="flex-1">
       <h3 class="text-3xl font-semibold" v-if="!!store.state.product">
         {{ store.state.product.title }}
       </h3>
