@@ -1,3 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { AppProductList } from '@/components/common'
+</script>
 
-<template>home</template>
+<template>
+  <AppProductList />
+</template>
