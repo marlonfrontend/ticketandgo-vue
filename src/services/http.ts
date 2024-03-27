@@ -1,7 +1,7 @@
 import axios, { type AxiosResponse } from 'axios'
 
 const axiosCreate = {
-  baseURL: 'https://fakestoreapi.com',
+  baseURL: import.meta.env.VITE_BACKEND_URL,
 
   headers: {
     Accept: 'application/json',

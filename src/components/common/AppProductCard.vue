@@ -1,5 +1,5 @@
 <script setup>
-import { AppCard, AppImage } from '@/components/ui'
+import { AppCard, AppImage, AppButton } from '@/components/ui'
 
 defineProps({
   id: {
@@ -33,6 +33,7 @@ defineProps({
       <div class="my-2">
         <span>R$</span> <span class="font-semibold text-xl">{{ price }}</span>
       </div>
+      <AppButton block>Comprar</AppButton>
     </div>
   </AppCard>
 </template>
