@@ -1,5 +1,5 @@
-import type { InjectionKey } from 'vue'
-import { createStore, Store } from 'vuex'
+import { createStore } from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
 import { getProducts, getProductById } from '@/services/product'
 import type { Product } from '@/types'
 
@@ -9,8 +9,6 @@ export interface State {
   cartItems: Product[]
   cartTotal: number
 }
-
-export const key: InjectionKey<Store<State>> = Symbol()
 
 export const store = createStore<State>({
   state: {
@@ -66,5 +64,6 @@ export const store = createStore<State>({
     removeCartItem({ commit }, product) {
       commit('removeCartItem', product)
     }
-  }
+  },
+  plugins: [createPersistedState()]
 })
