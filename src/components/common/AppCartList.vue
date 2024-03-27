@@ -54,5 +54,9 @@ onUnmounted(() => {
         <div class="text-xl font-semibold text-primary">R$ {{ product.price }}</div>
       </div>
     </AppCard>
+
+    <AppCard v-if="!store.state.cartItems.length" class="py-10">
+      <div className="text-lg text-center">Nenhum produdo foi adicionado no carrinho</div>
+    </AppCard>
   </div>
 </template>

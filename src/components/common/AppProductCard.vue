@@ -1,5 +1,6 @@
 <script setup>
 import { AppCard, AppImage, AppButton } from '@/components/ui'
+import { useRouter } from 'vue-router'
 
 defineProps({
   id: {
@@ -18,6 +19,8 @@ defineProps({
     type: String
   }
 })
+
+const router = useRouter()
 </script>
 
 <template>
@@ -33,7 +36,7 @@ defineProps({
       <div class="my-2">
         <span>R$</span> <span class="font-semibold text-xl">{{ price }}</span>
       </div>
-      <AppButton block>Comprar</AppButton>
+      <AppButton block @click="router.push(`/product/${id}`)">Comprar</AppButton>
     </div>
   </AppCard>
 </template>
