@@ -15,7 +15,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="grid grid-cols-4 gap-4 my-10">
+  <div class="grid md:grid-cols-4 grid-cols-1 gap-4 my-10">
     <AppProductCard
       v-for="product in store.state.products"
       :key="product.id"

@@ -17,7 +17,7 @@ const createOrder = (product) => {
 </script>
 
 <template>
-  <div class="grid grid-cols-2 gap-10">
+  <div class="grid md:grid-cols-2 grid-cols-1 gap-10">
     <div class="flex-1">
       <div class="w-[100%] h-[450px] p-10 border">
         <img
